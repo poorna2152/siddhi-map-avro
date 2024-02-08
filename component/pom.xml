@@ -222,6 +222,7 @@
                             io.siddhi.query.api.definition.*;version="${io.siddhi.version.range}",
                             com.jayway.jsonpath.*;version="${com.jayway.jsonpath.version.range}",
                             net.minidev.*;version="${net.minidev.json-smart.version.range}",
+                            *;resolution:=optional,
                     </Import-Package>
                         <Include-Resource>
                             META-INF=target/classes/META-INF

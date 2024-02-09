@@ -25,7 +25,7 @@
 
     <groupId>io.siddhi.extension.map.avro</groupId>
     <artifactId>siddhi-map-avro-parent</artifactId>
-    <version>2.2.3.1-SNAPSHOT</version>
+    <version>2.2.3.1</version>
     <name>Siddhi Avro Map Extensions</name>
 
     <modules>
@@ -311,5 +311,6 @@
         <developerConnection>scm:git:https://github.com/wso2-support/siddhi-map-avro.git</developerConnection>
         <connection>scm:git:https://github.com/wso2-support/siddhi-map-avro.git</connection>
         
-    </scm>
+      <tag>v2.2.3.1</tag>
+  </scm>
 </project>

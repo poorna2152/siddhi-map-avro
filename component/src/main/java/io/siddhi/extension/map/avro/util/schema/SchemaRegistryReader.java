@@ -17,7 +17,8 @@
  */
 package io.siddhi.extension.map.avro.util.schema;
 
-import com.google.gson.internal.LinkedTreeMap;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import feign.Feign;
 import feign.FeignException;
 import feign.gson.GsonDecoder;
@@ -36,8 +37,9 @@ public class SchemaRegistryReader {
                 .encoder(new GsonEncoder())
                 .decoder(new GsonDecoder())
                 .target(SchemaRegistryClient.class, registryURL);
-        LinkedTreeMap returnedSchema = registryClient.findByID(schemaID);
-        String jsonSchema = returnedSchema.get("schema").toString();
+        Object returnedSchema = registryClient.findByID(schemaID);
+        JsonElement jsonObject = new JsonParser().parse(returnedSchema.toString());
+        String jsonSchema = jsonObject.getAsJsonObject().get("schema").toString();
         return new Schema.Parser().parse(jsonSchema);
     }
 }

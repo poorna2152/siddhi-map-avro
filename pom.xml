@@ -310,7 +310,7 @@
         <url>https://github.com/wso2-support/siddhi-map-avro.git</url>
         <developerConnection>scm:git:https://github.com/wso2-support/siddhi-map-avro.git</developerConnection>
         <connection>scm:git:https://github.com/wso2-support/siddhi-map-avro.git</connection>
-        
+
       <tag>HEAD</tag>
   </scm>
 </project>
